@@ -1,0 +1,16 @@
+server:
+  port: 8181
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: PRODUCT-SERVICE
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/products/**
+        - id: CLIENT-SERVICE
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/clients/**

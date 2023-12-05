@@ -29,3 +29,15 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: localhost
+    
+keycloak:
+  secret: PpxjkIVnILpVoy5LgdMn2iMXa3i8KsOf
+  issuer: http://localhost:9999/realms/commerce-auth
+  tokend_endpoint: http://localhost:9999/realms/commerce-auth/protocol/openid-connect/token
+  
+security:
+  oauth2:
+    resourceserver:
+      jwt: 
+        issuer_uri: ${keycloak.issuer}
+  

@@ -31,7 +31,8 @@ eureka:
     hostname: localhost
     
 keycloak:
-  secret: PpxjkIVnILpVoy5LgdMn2iMXa3i8KsOf
+  clientId: commerce-auth
+  secret: O8ax8fppbPHQzNdQBHnuuGc4zOWMbihV
   issuer: http://localhost:9999/realms/commerce-auth
   tokend_endpoint: http://localhost:9999/realms/commerce-auth/protocol/openid-connect/token
   

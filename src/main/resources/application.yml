@@ -18,7 +18,9 @@ spring:
           uri: lb://ORDER-SERVICE
           predicates:
             - Path=/api/orders/**
-          
+  threads:
+     virtual:
+        enabled: true       
         
 
 eureka:
